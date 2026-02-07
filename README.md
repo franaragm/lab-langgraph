@@ -18,20 +18,29 @@
 
 ### 🔧 1) Crear entorno virtual
 
-python -m venv .venv
+```bash
+python -m venv .venv           # crea el entorno virtual
+
+# activa el entorno virtual dos maneras dependiendo de sistema operativo
 source .venv/bin/activate      # macOS / Linux
 .venv\Scripts\activate         # Windows
+```
 
 ---
 
-### 📦 2) Instalar dependencias
+### 📦 2) Instalar dependencias desde entorno virtual
 
+```bash
 pip install -r requirements.txt
-pip install -r requirements.lock
+pip install -r requirements.lock # instala versiones fijas
+```
 
-Para fijar nuevas dependencias:
+Para fijar nuevas dependencias despues de añadirlas a `requirements.txt`, ejecuta:
 
+```bash
+pip install -r requirements.txt
 pip freeze > requirements.lock
+```
 
 ---
 

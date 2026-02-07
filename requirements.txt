@@ -55,9 +55,6 @@ streamlit
 # Componentes de chat tipo burbujas para Streamlit (opcional)
 streamlit-chat
 
-# Framework de UI moderno para Python (alternativa a Streamlit)
-gradio
-
 
 #########################################
 # Utilidades y helpers
