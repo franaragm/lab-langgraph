@@ -24,25 +24,33 @@ if "example_data" not in st.session_state:
 # ======================================================
 
 def main():
-    """UI principal del sistema Helpdesk."""
+    """UI principal de la aplicación"""
 
-    st.title("titulo")
+    st.title("titulo App")
     st.markdown("*Subtítulo o descripción breve del sistema*")
-
     
+    st.text_input("Input de ejemplo", key="example_input")
+    if st.button("Guardar dato en sesión"):
+        st.session_state.example_data["input"] = st.session_state.example_input
+        st.success("Dato guardado en sesión")
+        
+    if st.session_state.example_data.get("input"):
+        st.info(f"Dato en sesión: {st.session_state.example_data['input']}")
+    else:
+        st.warning("⚠️ No hay datos en sesión")
 
     # ==================================================
     # Sidebar
     # ==================================================
     with st.sidebar:
-        st.header("📊 Panel de Control")
-        st.metric("Tickets Activos", 8)
+        st.header("Sidebar Title")
+        st.metric("Cantidad de caracteres", len(st.session_state.example_data.get("input", "")))
 
         # Estado del sistema RAG
-        st.subheader("🔍 Estado RAG")
+        st.subheader("Subtítulo del sistema")
         
 
-        st.subheader("🔄 Flujo del Sistema")
+        st.subheader("Sumario del proceso ejemplo RAG")
         st.text(
             """
             1. 📝 Usuario envía consulta
@@ -55,15 +63,11 @@ def main():
         )
 
         st.subheader("⚙️ Configuración")
-        if st.button("🗑️ Limpiar Tickets"):
+        if st.button("🗑️ Limpiar Data"):
             st.session_state.example_data = {}
             st.rerun()
 
-    if not st.session_state.example_data:
-        st.warning(
-            "⚠️ no hay data "
-        )
-        return
+    
 
     # ==================================================
     # Área principal
