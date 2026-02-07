@@ -53,8 +53,6 @@ Editar `.env` con tus claves:
 ```
 OPENAI_API_KEY=API_KEY_HERE
 GOOGLEAI_API_KEY=API_KEY_HERE
-OPENROUTER_API_KEY=API_KEY_HERE
-OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
 GROQ_API_KEY=API_KEY_HERE
 GROQ_BASE_URL=https://api.groq.com/openai/v1
 ENV=dev
