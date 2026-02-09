@@ -109,6 +109,9 @@ langgraph-checkpoint
 # Persistencia de estado usando SQLite para LangGraph
 langgraph-checkpoint-sqlite
 
+# Grandalf is a python package made for experimentations with graphs drawing algorithms.
+grandalf
+
 # NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
 networkx
 
