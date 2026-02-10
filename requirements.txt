@@ -127,3 +127,6 @@ networkx
 #
 # Forman parte de la librería estándar de Python
 #########################################
+
+# analizar entorno virtual
+pypkgsize
